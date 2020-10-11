@@ -2,45 +2,46 @@
 [![Ansible Galaxy](https://img.shields.io/badge/galaxy-jonakoudijs.plex-blueviolet.svg)](https://galaxy.ansible.com/jonakoudijs/ansible_plex)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Plex Ansible Role
-=================
+# Plex Ansible Role
 
-Install Plex on Linux
+Install Plex on Linux (RedHat and Debian derivatives)
 
-Requirements
-------------
+## Requirements
 
 This role needs to be executed as root with `become: true`.
 
-Role Variables
---------------
+## Role Variables
 
-The following variables are set in `defaults/main.yml` and can be overwritten:
-```
-plex_repo  # (bool) Use official Plex package repository
+The following variables are set in `defaults/main.yml` and can be overriden:
+
+```yml
+plex_repo: true  # (bool) Use official Plex package repository
+plex_repo_key: "https://downloads.plex.tv/plex-keys/PlexSign.key"
+
+plex_package_name: "plexmediaserver"
+plex_package_state: "present"
+
+plex_service_name: "plexmediaserver"
 ```
 
-Dependencies
-------------
+## Dependencies
 
 This role does not have any dependencies.
 
-Example Playbook
-----------------
+## Example Playbook
 
 Installing Plex:
-```
+
+```yml
 - hosts: servers
   roles:
      - plex
 ```
 
-License
--------
+## License
 
 [MIT license](LICENSE)
 
-Author Information
-------------------
+## Author Information
 
 Originally created by [Jona Koudijs](https://www.jona.io).

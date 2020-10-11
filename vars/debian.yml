@@ -1,0 +1,4 @@
+---
+# vars file for plex / debian, ubuntu
+
+plex_repo_url: "deb https://downloads.plex.tv/repo/deb public main"

@@ -1,20 +1,25 @@
 galaxy_info:
-  author: Jona Koudijs
+  author: Jona Koudijs, eagleusb
   description: Install Plex on Linux
-
-  license: MIT
-  min_ansible_version: 2.5
-
+  license: "license (MIT)"
+  min_ansible_version: 2.8
   platforms:
+    - name: Debian
+      versions:
+        - stretch
+        - buster
     - name: Ubuntu
       versions:
-        - bionic
         - xenial
+        - bionic
+        - focal
+        - groovy
     - name: EL
       versions:
         - 7
-
+        - 8
   galaxy_tags:
     - plex
+    - mediaserver
 
 dependencies: []

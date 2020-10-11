@@ -2,3 +2,9 @@
 # defaults file for plex
 
 plex_repo: true
+plex_repo_key: "https://downloads.plex.tv/plex-keys/PlexSign.key"
+
+plex_package_name: "plexmediaserver"
+plex_package_state: "present"
+
+plex_service_name: "plexmediaserver"

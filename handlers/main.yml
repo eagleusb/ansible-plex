@@ -1,0 +1,13 @@
+---
+
+- name: "start plex service"
+  service:
+    name: "{{ plex_service_name }}"
+    state: started
+  listen: "start and enable plex service"
+
+- name: "enable plex service"
+  service:
+    name: "{{ plex_service_name }}"
+    enabled: true
+  listen: "start and enable plex service"
